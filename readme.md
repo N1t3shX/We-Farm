@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# Crop Price Prediction System - Project Documentation
 
-## Project info
+## Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This repository contains the source code for an agricultural crop price prediction application built using modern web technologies and machine learning algorithms.
 
-## How can I edit this code?
+## Development Environment Setup
 
-There are several ways of editing your application.
+You have multiple options for working with this codebase, depending on your preferred workflow and development tools.
 
-**Use Lovable**
+### Option 1: Lovable Platform Integration
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Access the project through the Lovable development environment by navigating to your project dashboard. Any modifications you make through the Lovable interface will be automatically synchronized with this repository, ensuring seamless version control integration.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Option 2: Local Development Setup
 
-**Use your preferred IDE**
+For developers who prefer working in their own integrated development environment, you can set up the project locally on your machine. This approach gives you full control over your development workflow while maintaining synchronization with the remote repository.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Prerequisites:**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js runtime environment (version 14 or higher recommended)
+- npm package manager (comes bundled with Node.js)
+- Git version control system
 
-Follow these steps:
+**Installation Instructions:**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+If you don't have Node.js installed, you can use Node Version Manager (nvm) for easy installation and version management. Refer to the official nvm documentation for installation steps.
+
+**Getting Started Locally:**
+
+Execute the following commands in your terminal to set up the development environment:
+
+```bash
+# Retrieve the project repository from the remote source
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Change into the project root directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Download and install all required project dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Launch the local development server with hot-reload capabilities
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start and provide you with a local preview URL where you can view your application in real-time.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Option 3: GitHub Web Interface
 
-**Use GitHub Codespaces**
+You can make direct edits to files through GitHub's web-based editor:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Open the file you wish to modify in the GitHub repository view
+- Locate and click the edit icon (typically displayed as a pencil symbol) in the file header
+- Make your desired changes in the web editor
+- Save your changes by committing them with an appropriate commit message
 
-## What technologies are used for this project?
+### Option 4: GitHub Codespaces
 
-This project is built with:
+For a cloud-based development experience without local setup:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Go to your repository's main page on GitHub
+- Find and click the green "Code" button located in the top-right area of the page
+- Open the "Codespaces" section from the dropdown menu
+- Initialize a new Codespace instance by clicking "New codespace"
+- Once the environment is ready, you can edit files directly in the browser
+- Commit and push your changes when you're satisfied with your modifications
 
-## How can I deploy this project?
+## Technology Stack
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The application leverages the following technologies and frameworks:
 
-## Can I connect a custom domain to my Lovable project?
+- **Vite**: Fast build tool and development server for modern web applications
+- **TypeScript**: Typed superset of JavaScript that enhances code reliability
+- **React**: Popular JavaScript library for building interactive user interfaces
+- **shadcn-ui**: Collection of reusable UI components built on Radix UI
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
 
-Yes, you can!
+## Deployment Process
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To make your application publicly accessible, you can deploy it through the Lovable platform:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Access your project in the Lovable dashboard
+2. Navigate to the Share menu
+3. Select the Publish option to deploy your application
+
+## Custom Domain Configuration
+
+Yes, custom domain integration is supported!
+
+To set up a custom domain for your application:
+
+1. Go to your project settings in Lovable
+2. Navigate to the Domains section
+3. Click the "Connect Domain" button
+4. Follow the on-screen instructions to configure your domain
+
+For detailed information about custom domain setup, including DNS configuration and SSL certificate management, please refer to the official Lovable documentation on custom domains.

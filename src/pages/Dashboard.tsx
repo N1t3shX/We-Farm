@@ -126,8 +126,6 @@ const Dashboard = () => {
 
   const username = localStorage.getItem("username") || "Farmer";
 
-  /* ---------------- UI ---------------- */
-
   return (
     <div className="min-h-screen gradient-hero">
       {/* HEADER */}
@@ -268,8 +266,6 @@ const Dashboard = () => {
             )}
           </CardContent>
         </Card>
-
-        {/* ✅ GO TO HOME BUTTON */}
         <div className="text-center mt-10">
           <Button variant="outline" size="lg" onClick={goToHome}>
             Back to Home

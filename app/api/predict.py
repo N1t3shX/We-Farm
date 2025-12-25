@@ -7,6 +7,10 @@ from app.services.disease_model import predict_disease
 router = APIRouter()
 
 class PredictRequest(BaseModel):
+    """
+    Request model for crop disease prediction endpoint.
+    Contains crop type, observed symptoms, and geographic coordinates.
+    """
     crop: str
     symptoms: str
     latitude: float
@@ -14,21 +18,25 @@ class PredictRequest(BaseModel):
 
 @router.post("/predict")
 def predict(data: PredictRequest):
-    weather = get_weather(data.latitude, data.longitude)
-    ndvi_data = get_ndvi(data.latitude, data.longitude)
+    """
+    Main prediction endpoint that aggregates weather data, satellite imagery,
+    and symptom analysis to provide comprehensive crop disease assessment.
+    """
+    current_weather = get_weather(data.latitude, data.longitude)
+    vegetation_index = get_ndvi(data.latitude, data.longitude)
 
-    disease_result = predict_disease(
+    disease_analysis = predict_disease(
         data.crop,
         data.symptoms,
-        weather
+        current_weather
     )
 
     return {
         "crop": data.crop,
         "symptoms": data.symptoms,
-        "weather": weather,
-        "satellite": ndvi_data,
-        "prediction": disease_result["disease"],
-        "risk": disease_result["risk"],
-        "confidence": disease_result["confidence"],
+        "weather": current_weather,
+        "satellite": vegetation_index,
+        "prediction": disease_analysis["disease"],
+        "risk": disease_analysis["risk"],
+        "confidence": disease_analysis["confidence"],
     }
